@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/filledTextField">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EditText_email"
+            android:id="@+id/EditText_profile_email"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="@+id/filledTextField"
@@ -136,7 +136,7 @@
         app:layout_constraintTop_toBottomOf="@+id/filledTextField3">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EditText_confirmpassword"
+            android:id="@+id/EditText_profile_password"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -147,7 +147,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/Button_SignUp"
+        android:id="@+id/Button_profile_update"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

@@ -17,6 +17,7 @@
             android:exported="false" />
         <activity
             android:name=".LoginPage"
+            android:label="Login Page"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

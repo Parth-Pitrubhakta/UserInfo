@@ -12,7 +12,7 @@ class SignUpPage : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up_page)
 
         val btnLogin = findViewById<TextView>(R.id.TextButton_Login)
-        val btnSignUp = findViewById<Button>(R.id.Button_SignUp)
+        val btnSignUp = findViewById<Button>(R.id.Button_profile_update)
 
         btnLogin.setOnClickListener {
             startActivity(Intent(this, LoginPage::class.java))
