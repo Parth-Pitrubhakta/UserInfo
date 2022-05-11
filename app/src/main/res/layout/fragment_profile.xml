@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:padding="20dp"
-            android:background="#fece2f"
+            android:background="@color/white"
             android:orientation="vertical">
 
             <ImageView
@@ -35,8 +35,8 @@
                 android:includeFontPadding="false"
                 android:text="Parth Pitrubhakta"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/username_field"

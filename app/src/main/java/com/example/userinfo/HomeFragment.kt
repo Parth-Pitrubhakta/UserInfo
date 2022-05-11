@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,6 +20,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class HomeFragment : Fragment() {
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,6 +39,46 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
+    }
+
+    private lateinit var dbref : DatabaseReference
+    private lateinit var userRecyclerView: RecyclerView
+    private lateinit var userArrayList: ArrayList<User>
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        userRecyclerView = view.findViewById(R.id.recyclerView)
+        userRecyclerView.layoutManager = LinearLayoutManager(context)
+        userRecyclerView.setHasFixedSize(true)
+
+        userArrayList = arrayListOf<User>()
+        getUserData()
+
+    }
+
+    private fun getUserData() {
+
+        dbref = FirebaseDatabase.getInstance().getReference("Users")
+
+        dbref.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                if (snapshot.exists()){
+                    for (userSnapshot in snapshot.children){
+
+
+                        val user = userSnapshot.getValue(User::class.java)
+                        userArrayList.add(user!!)
+                    }
+
+                    userRecyclerView.adapter  = UserAdapter(userArrayList)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+            }
+        })
     }
 
     companion object {

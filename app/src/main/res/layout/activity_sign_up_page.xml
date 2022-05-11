@@ -24,9 +24,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/filledTextField"
-
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -50,15 +48,41 @@
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_campaign_name" />
+            app:layout_constraintTop_toBottomOf="@+id/text_SignUp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledTextField5"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Enter username"
+        android:textColorHint="@color/teal_700"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeWidth="3dp"
+        app:boxStrokeColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filledTextField">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EditText_username"
+            android:layout_width="250dp"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filledTextField" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/filledTextField2"
-
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="Enter your email id"
@@ -72,26 +96,24 @@
         app:boxCornerRadiusTopStart="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/filledTextField">
+        app:layout_constraintTop_toBottomOf="@+id/filledTextField5">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EditText_profile_email"
+            android:id="@+id/EditText_email"
+            android:layout_marginTop="16dp"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="@+id/filledTextField"
-            app:layout_constraintStart_toStartOf="@+id/filledTextField"
-            app:layout_constraintTop_toBottomOf="@+id/filledTextField" />
-
+            app:layout_constraintEnd_toEndOf="@+id/filledTextField5"
+            app:layout_constraintStart_toStartOf="@+id/filledTextField5"
+            app:layout_constraintTop_toBottomOf="@+id/filledTextField5" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/filledTextField3"
-
+        android:id="@+id/filledTextField4"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:hint="Create password"
+        android:hint="Enter your Phone no"
         android:textColorHint="@color/teal_700"
         android:layout_marginTop="8dp"
         app:boxStrokeWidth="3dp"
@@ -105,24 +127,20 @@
         app:layout_constraintTop_toBottomOf="@+id/filledTextField2">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EditText_password"
+            android:id="@+id/EditText_phone_no"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColorHint="@color/purple_200"
-            app:layout_constraintEnd_toEndOf="@+id/filledTextField2"
+            app:layout_constraintEnd_toEndOf="@+id/filledTextField"
             app:layout_constraintStart_toStartOf="@+id/filledTextField2"
             app:layout_constraintTop_toBottomOf="@+id/filledTextField2" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/filledTextField4"
-
+        android:id="@+id/filledTextField3"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:hint="Confirm password"
+        android:hint="Create password"
         android:textColorHint="@color/teal_700"
         android:layout_marginTop="8dp"
         app:boxStrokeWidth="3dp"
@@ -133,17 +151,17 @@
         app:boxCornerRadiusTopStart="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/filledTextField3">
+        app:layout_constraintTop_toBottomOf="@+id/filledTextField4">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EditText_profile_password"
+            android:id="@+id/EditText_password"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textColorHint="@color/purple_200"
-            app:layout_constraintEnd_toEndOf="@+id/filledTextField3"
-            app:layout_constraintStart_toStartOf="@+id/filledTextField3"
-            app:layout_constraintTop_toBottomOf="@+id/filledTextField3" />
+            app:layout_constraintEnd_toEndOf="@+id/filledTextField4"
+            app:layout_constraintStart_toStartOf="@+id/filledTextField4"
+            app:layout_constraintTop_toBottomOf="@+id/filledTextField4" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -157,10 +175,10 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:cornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/filledTextField4"
+        app:layout_constraintEnd_toEndOf="@+id/filledTextField3"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/filledTextField4"
-        app:layout_constraintTop_toBottomOf="@+id/filledTextField4" />
+        app:layout_constraintStart_toStartOf="@+id/filledTextField3"
+        app:layout_constraintTop_toBottomOf="@+id/filledTextField3" />
 
     <LinearLayout
         android:layout_width="wrap_content"
